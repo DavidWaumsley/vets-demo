@@ -60,9 +60,9 @@ header > * {
   header { 
   display: grid;     
   grid-template:     
-  "logo   logo  contact  contact  cta" 
-  "logo   logo  nav      nav      nav" 
- / 1.2fr    2fr  2fr      1fr      200px; 
+   "logo   contact  contact  cta" 
+   "logo   nav      nav      nav" 
+ /  3fr    2fr      1fr     200px; 
   } 
  
 .logo           {grid-area:logo; justify-content: start;}
