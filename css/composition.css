@@ -67,7 +67,7 @@ header > * {
  
 .logo           {grid-area:logo; justify-content: start;}
 .contacts       {grid-area: contact; justify-content: start; }  
- nav            {grid-area: nav; justify-content: start; align-content:end; border-block-start: .01rem solid var(--shadow); }
+header nav      {grid-area: nav; justify-content: start; align-content:end; border-block-start: .01rem solid var(--shadow); }
 .header-button  {grid-area:cta; justify-content: end;}
 
 } /* end of media query */
