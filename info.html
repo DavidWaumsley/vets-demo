@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>        
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--  https://schema.org/Organization -->      
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/composition.css" />
+    <link rel="stylesheet" href="/css/utility.css" />
+    <link rel="stylesheet" href="/css/block.css" />
+    <link rel="stylesheet" href="/css/exceptions.css" />
+    
+<!--SEO START -->
+<link rel="canonical" href="https://vets.here24.co/info">
+<title>No Script Show: Simple Vet's Website Demo</title>
+<meta name="description" content="This is a demo site to show off CSS Grid.">
+  <!-- Facebook image -->
+<meta property="og:image" content="/images/og-image.webp" />
+<!-- Twitter image -->
+<meta property="twitter:image" content="/images/og-image.webp" />
+<!--SEO END -->
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="icon" type="image/svg" href="/images/favicon.svg" />
+  </head>
+  <body class="info" id="top">
+    <a href="#skip-to-main" class="skip-link">Skip to content</a>
+
+    <header>
+      <a class="logo" href="/"
+        ><img
+        src="/images/logo.svg"
+          alt="NSS Vets logo."
+          width="240"
+          height="187"
+      /></a>
+      <div class="[ contacts ]">
+        <ul>
+          <li>
+            <a href="tel:01234567890"
+              >
+              
+              <svg
+                role="img"
+                aria-labelledby="tel"
+                xmlns="http://www.w3.org/2000/svg"
+                class="contact-icons"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="var(--icon)
+                "
+              >
+              <title id="tel">telephone link.</title>
+                <path
+                  d="M21 16.42V19.9561C21 20.4811 20.5941 20.9167 20.0705 20.9537C19.6331 20.9846 19.2763 21 19 21C10.1634 21 3 13.8366 3 5C3 4.72371 3.01545 4.36687 3.04635 3.9295C3.08337 3.40588 3.51894 3 4.04386 3H7.5801C7.83678 3 8.05176 3.19442 8.07753 3.4498C8.10067 3.67907 8.12218 3.86314 8.14207 4.00202C8.34435 5.41472 8.75753 6.75936 9.3487 8.00303C9.44359 8.20265 9.38171 8.44159 9.20185 8.57006L7.04355 10.1118C8.35752 13.1811 10.8189 15.6425 13.8882 16.9565L15.4271 14.8019C15.5572 14.6199 15.799 14.5573 16.001 14.6532C17.2446 15.2439 18.5891 15.6566 20.0016 15.8584C20.1396 15.8782 20.3225 15.8995 20.5502 15.9225C20.8056 15.9483 21 16.1633 21 16.42Z"
+                ></path>
+              </svg>
+              01234 567 890</a
+            >
+          </li>
+
+          <li>
+            <!-- https://spencermortensen.com/articles/email-obfuscation/#link-url -->
+             <a href="mailto:%69%6e%66%6f%40%63%6f%6f%6c%2d%77%65%62%73%69%74%65%2e%63%6f%6d?subject=Enquiry%20from%20the%20NNS%20vets%20website."
+              ><svg
+                role="img"
+                aria-labelledby="email"
+                xmlns="http://www.w3.org/2000/svg"
+                class="contact-icons"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="var(--icon)"
+              >
+              <title id="email">Email link.</title>
+                <path
+                  d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12.0606 11.6829L5.64722 6.2377L4.35278 7.7623L12.0731 14.3171L19.6544 7.75616L18.3456 6.24384L12.0606 11.6829Z"
+                ></path>
+              </svg>
+              <span class="email">info@nss-vets<b>.example</b>.com</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="[ header-button ]">
+        <a class="btn" href="#skip-to-footer">opening hours  <span class="down-arrow"> ▼</span> </a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="/" >Home</a>
+          </li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/services.html" >Services</a></li>
+          <li><a href="/info.html" aria-current="page" data-state="active">Website Info</a></li>
+          <li><a href="/insurance.html">Pet Insurance</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="skip-to-main" class="[ page-layout ] [ flow ]"> 
+
+      <h1>Website Info</h1>
+
+<p>This is an understyled demo site to demonstrate CSS grid. For more information watch the videos on building a vet site at the No Script Show's <a href="https://www.youtube.com/@NoScriptShow/videos">YouTube channel. </a></p>
+
+<h2>CSS overview</h2>
+<ul>
+  <li>Approach borrowed from <a href="https://cube.fyi/">CUBE CSS.</a></li>
+  <li> Aesthetics are separated from structure in <a href="/css/global.css">global</a> and <a href="/css/block.css">block</a> .</li>
+  <li>The <a href="/css/composition.css">structure</a> (composition) mostly uses CSS Grid's template areas.</li>
+  <li> There's a CSS <a href="/css/utility.css">utility</a> file. On this page it adds document flow.</li>
+</ul>
+
+<h3>You should find:</h3>
+
+<ul>
+  <li>A basic dark mode theme for those with that preference.</li>
+  <li>Logical properties used for internationalization. </li>
+  <li>Outlines added for high contrast themes (see snippet below).</li>
+  <li>Accessibility may meet WCAG 2.2 AAA.</li>
+  <li>HTML <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fvets.here24.co%2F">validates </a> on all pages. The CSS validator has not been updated.</li>
+  <li>Skip to content links.</li>
+  <li>A top <a href="https://pagespeed.web.dev/analysis/https-vets-here24-co/bj9xjba781?form_factor=mobile">Google page speed score</a> on mobile testing.</li>
+</ul>
+
+<p>*All that said, there are likely to be some things missed.</p>
+
+<pre>
+outline: 0.1rem solid transparent;
+outline-offset: -0.125rem;
+</pre>
+
+<h2>Also Noteworthy</h2>
+<ul>
+  <li>Opening times flexible list items.</li>
+  <li>Bento overlays with box shadow.</li>
+  <li> <a href="https://spencermortensen.com/articles/email-obfuscation/#link-url">Encrypted</a> email address. </li>
+  <li>Use of system fonts.</li>
+  <li>Aria-labelledby on icons.</li>
+  <li>Dealing with dark mode logos.</li>
+  <li><a href="https://metatags.io/?url=https%3A%2F%2Fvets.here24.co%2F">Open Graph</a></li>
+</ul>
+
+
+
+<p>The image below shows the use of CSS grid breakouts using named grid lines. It can be set to full width without creating a wrapper div. </p>
+
+<img class=" [ full ]" src="/images/full-width-hamsters.webp"  width="1920" height="700" loading="lazy" alt="Three hamsters huddled together.">
+
+<h2>Things to improve</h2>
+
+<p>These are not done as it's template for reusing rather than a live site. Also we need to save things for other builds.</p>
+
+<ul>
+  <li>Header layout <a href="https://intrinsicframework.here24.co/_templates/headers/header-4">works better here</a></li>
+  <li>Better Dark mode theming ie.bento colours using relative colours.</li>
+  <li> If for more pages, I'd have set more variables (ie. border radius).</li>
+  <li>If not intended as a theme I may have use grid for each homepage image.</li>   
+  <li>Testimonial with grid (maybe with snap scrolling).</li>
+  <li>Use the picture tag on the Bento "call-out" for a mobile image.</li>
+  <li>More border styles in the bento boxes.</li>  
+  <li>Use the picture tag to swap a new mobile image for the bento call-out.</li>
+  <li>More styling on the footer.</li>
+  <li>Blogging (relatively easy to add).</li>
+  <li>Combine and minify CSS (but only 9kb).</li> 
+</ul>
+
+      </main>
+      <footer class="[ flow ]" id="skip-to-footer">
+        <div class="[ back-to-top ]">
+          <a class="[ btn ]" href="#top" aria-label="back to top"> Back to top ▲</a>
+         </div>
+        <h4>Opening hours</h4>
+  
+        <div class="[ fat-footer-wrapper ]">
+          <div class="[ hours ] [ main ]">
+            <h5>Main Branch</h5>
+  
+            <a href="https://www.google.com/maps/place/195+Melrose+Ave,+London+NW2+4NA,+UK/@51.5542435,-0.2292038,17z/data=!3m1!4b1!4m6!3m5!1s0x487610567dfaf719:0x4a2098e65fb548d4!8m2!3d51.5542435!4d-0.2292038!16s%2Fg%2F11c292s93s?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D"
+            ><svg   
+              role="img"
+              aria-labelledby="map"
+              xmlns="http://www.w3.org/2000/svg"
+              class="contact-icons"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="var(--icon)"          >
+            
+           <title id="map">map.</title>
+            <path d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z"></path>
+            </svg><address>195 Melrose Place, Cricklewood, London NW2 4NA</address></a>          
+            <ul>
+              <li><span>Monday - Friday</span><span>8:30am - 5pm</span></li>
+              <li><span>Saturday</span><span>8:30am - 12pm</span></li>
+            </ul>
+          </div>
+  
+          <div class="[ hours ] [ branch ]">
+            <h5>Gloucester Branch</h5>        
+  
+            <a href="https://www.google.com/maps/place/25+Cromwell+St,+Gloucester+GL1+1RE,+UK/@51.8619208,-2.2461612,17z/data=!3m1!4b1!4m6!3m5!1s0x4871067091aa551b:0xfb3b226d21f0007f!8m2!3d51.8619208!4d-2.2435809!16s%2Fg%2F11c2glx7q_?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D"
+            >          
+            <svg   
+            role="img"
+             aria-labelledby="footer-map"
+              xmlns="http://www.w3.org/2000/svg"
+              class="contact-icons"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="var(--icon)"
+            >          
+          <title id="footer-map">map.</title>
+            <path d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z"></path>
+            </svg><address>25 Cromwell Street, Gloucester, GL1 1RE</address></a>
+            <ul>
+              <li><span>Monday - Friday</span><span>9am - 12.30 pm</span></li>
+              <li><span>Monday - Friday</span><span>2pm - 5pm</span></li>
+            </ul>
+          </div>
+  
+          <nav class="[ service ]">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="/">Vet / Nurse consultations</a></li>
+              <li><a href="/">Cruciate surgery</a></li>
+              <li><a href="/">Acupuncture </a></li>
+              <li><a href="/">Blood donor register</a></li>
+              <li><a href="/">Repeat medications</a></li>
+              <li><a href="/">Pet health plan</a></li>
+            </ul>
+          </nav>
+  
+          <nav class="[ Information ]">
+            <h4>Information</h4>
+            <ul>
+              <li><a href="/">Vaccinations</a></li>
+              <li><a href="/">Neutering</a></li>
+              <li><a href="/">Flea and worm treatment</a></li>
+              <li><a href="/">Dental health</a></li>
+              <li><a href="/">Animal poisons line</a></li>
+              <li><a href="/">Insurance info</a></li>
+            </ul>
+          </nav>
+  
+          <div class="[ foot-contact ]">
+            <h4>Contact</h4>
+  
+            <ul>
+              <li>
+                <a href="tel:01234567890"
+                  ><svg
+                   role="img"
+                   aria-labelledby="footer-tel"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="contact-icons"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="var(--icon)"
+                  >
+                  <title id="footer-tel">Telephone link.</title>
+                    <path
+                      d="M21 16.42V19.9561C21 20.4811 20.5941 20.9167 20.0705 20.9537C19.6331 20.9846 19.2763 21 19 21C10.1634 21 3 13.8366 3 5C3 4.72371 3.01545 4.36687 3.04635 3.9295C3.08337 3.40588 3.51894 3 4.04386 3H7.5801C7.83678 3 8.05176 3.19442 8.07753 3.4498C8.10067 3.67907 8.12218 3.86314 8.14207 4.00202C8.34435 5.41472 8.75753 6.75936 9.3487 8.00303C9.44359 8.20265 9.38171 8.44159 9.20185 8.57006L7.04355 10.1118C8.35752 13.1811 10.8189 15.6425 13.8882 16.9565L15.4271 14.8019C15.5572 14.6199 15.799 14.5573 16.001 14.6532C17.2446 15.2439 18.5891 15.6566 20.0016 15.8584C20.1396 15.8782 20.3225 15.8995 20.5502 15.9225C20.8056 15.9483 21 16.1633 21 16.42Z"
+                    ></path>
+                  </svg>
+                  01234 567 890</a
+                >
+              </li>
+  
+              <li>
+                <a href="mailto:%69%6e%66%6f%40%63%6f%6f%6c%2d%77%65%62%73%69%74%65%2e%63%6f%6d?subject=Enquiry%20from%20the%20NNS%20vets%20website."
+                  >  <svg
+                  role="img"
+                  aria-labelledby="footer-email"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="contact-icons"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="var(--icon)"
+                >
+                <title id="footer-email">Email link.</title>
+                  <path
+                    d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM12.0606 11.6829L5.64722 6.2377L4.35278 7.7623L12.0731 14.3171L19.6544 7.75616L18.3456 6.24384L12.0606 11.6829Z"
+                  ></path>
+                </svg>
+                  <span class="email">info@nss-vets<b>.example</b>.com</span></a
+                >
+              </li>
+  
+              <li>
+                <a href="/">
+                  <svg
+                    role="img"
+                    aria-labelledby="facebook-fill"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="social-icon"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <title id="facebook-fill">Facebook icon.</title>
+                    <path
+                      d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47062 14 5.5 16 5.5H17.5V2.1401C17.1743 2.09685 15.943 2 14.6429 2C11.9284 2 10 3.65686 10 6.69971V9.5H7V13.5H10V22H14V13.5Z"
+                    ></path>
+                  </svg>
+                  Facebook</a
+                >
+              </li>
+            </ul>
+          </div>
+  
+          <div class="[ foot-bar ]">
+            <br />
+            <small>
+              &copy; 2010 - now &centerdot; <a href="/">Privacy & terms</a></small
+            >
+          </div>
+        </div>
+        <!-- end of fat-footer-wrapper -->
+      </footer>
+  </body>
+</html>

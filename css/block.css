@@ -1,0 +1,432 @@
+/*
+BLOCK
+0_ BODY
+1_ HEADER & NAV 
+2_ FOOTER
+3_ BENTO
+4_ TEAM
+5_ FORMS
+6_ OTHER
+
+*/ 
+/********************************************************/
+
+/************ 0_ BODY ************/              
+
+/*********************************************************/
+ .home, .insurance{
+  background-image: url("/images/blob.svg");
+  background-attachment: scroll; 
+  background-size: 100%;
+  background-position:0 20%;
+  background-repeat: no-repeat;  
+}
+
+/*  prefers color scheme on external svgs does not work on safari and older browsers
+Uncomment below to bring in a different svg
+*/
+
+/* @media (prefers-color-scheme: dark) {
+  .home, .insurance{
+    background-image: url("/images/blob-dark.svg");   
+  }  
+} */
+
+/*button*/
+
+.btn{
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--accent);
+  color:  hsl(224, 19%, 15%);
+  display: block;
+  padding: 0.3em 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: var(--step--1);
+  text-decoration: none;  
+  text-transform: uppercase;
+  width:  fit-content;
+  height: fit-content; 
+  font-size: var(--step--2); 
+  outline: 0.1rem solid transparent;
+  outline-offset: -0.125rem;
+  box-shadow: .08rem  .15rem 0rem hsl(0, 0%, 2%);
+  transition: .2s ease-out;
+  margin-block-end: var(--space-s);
+}
+
+button.btn  {
+  padding: 1em 2em; 
+}
+
+.btn:hover {
+
+  color: hsl(220, 29%, 10%);
+  transition: .1s ease-in; 
+  box-shadow: .05rem .08rem ;
+  background-color: hsl(41, 99%, 48%); 
+  transition: .2s ease-in;   
+}  
+  
+/************************************************************************************/
+
+ /**********1_ HEADER & NAV  **********/
+
+/************************************************************************************/
+
+  
+  nav a, nav a:active{     
+    font-size: var(--step--1);
+    text-transform: capitalize ;   
+  } 
+
+  nav a[aria-current=page]:after, nav a[data-state=active]:after {
+    content: "";
+    display: block;
+    height: .15rem;
+    background: var(--tertiary);   
+}
+  
+  footer li, header li{    
+    list-style: none; 
+    line-height: 2.2; 
+  }
+
+li a{    
+    list-style: none;  
+    padding-block: .8rem;
+    /* may need inline padding if using a short word */
+  }
+    
+  header a{
+   text-decoration: none;  
+  }
+
+.contacts{
+  font-size: var(--step--1)
+}
+
+
+ /************************************************************************************/
+
+ /************ 2_ FOOTER ************/
+
+/************************************************************************************/  
+
+footer{
+  border-block-start: .1rem solid var(--shadow);
+}
+
+.foot-bar {
+  border-block-start: .1rem solid var(--shadow);
+}
+
+footer address, footer li{
+  font-size: var(--step--1);
+} 
+
+footer svg, header .contacts svg{
+  display: inline-block;
+  margin-inline-end: .5rem;    
+  padding: .3rem;   
+  background-color: var(--tertiary);
+  border-radius: 1rem; 
+}
+
+ /* Footer opening hours mock table */
+
+.hours ul li {  
+ padding: 20px 0; 
+ list-style: none;  
+ }  
+      
+.hours ul li span:first-child{
+float: inline-start; 
+padding: 0 .5rem 0 0; 
+font-weight: 600;
+}
+
+.hours ul li span:first-child + span{
+float: inline-end; 
+padding: 0 0 0 .5rem;
+font-weight: 600;
+}
+.hours  ul li:after{ 
+  content: ''; 
+  height:1.5rem;
+  display: block;
+  overflow: hidden; 
+  border-block-end: .1rem solid #ccc; 
+ }   
+
+ .foot-contact a{
+  text-decoration: none;
+  }
+
+ 
+      
+ /************************************************************************************/
+
+ /************ 3_ BENTO ************/
+
+/************************************************************************************/  
+.bento > div{
+  outline: 0.1rem solid transparent;
+  outline-offset: -0.125rem;
+  /* added for high contrast themes */
+  color: hsl(0, 0%, 98%);
+}
+
+.bento h2{
+  margin-block-start: var(--space-l);
+}
+
+.bento h2{
+  grid-area: heading; 
+  justify-self: center;
+}
+
+.bento-insurance{
+  grid-area: insure ;
+  background-color: var(--brand); 
+  justify-content: center;  
+  background: url(/images/dog-insurance.webp);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover; 
+  box-shadow: inset 14rem 5rem  10rem rgba(8, 45, 114, .9); 
+
+}
+
+.plan{
+  grid-area: plan;
+  background-color: var(--tertiary);
+  background: url(/images/cat-plan.webp);
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size:cover ; 
+  box-shadow: inset 13rem 6rem 8rem rgb(152, 47, 50, .95); 
+ }
+
+.bento-services {  
+  grid-area:services; 
+  /* background: url(/images/blob2.svg);
+  background-repeat:no-repeat ;
+  background-position: centre;
+  background-size: cover; */
+  background-color: var(--secondary);
+ 
+}
+
+.bento-services  h3{
+  font-family: system-ui, sans-serif;
+  font-size: var(--step-0);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-block-end: var(--space-s);
+  color: var(--accent);
+}
+
+.bento-services  a{   
+ color: hsl(0, 0%, 98%);
+ text-decoration-color:initial;
+}
+
+.bento-services  a:hover{   
+  color: var(--accent);
+  text-decoration-color:initial;
+ }
+
+.bento-services  li::marker  {
+  color: var(--accent);
+  content: '❖  ';  
+  font-size: var(--step-0);  
+}
+
+.callout{
+ grid-area: callout;
+ background-color: var(--accent);
+
+}
+
+.callout h3, .callout p, .callout a {
+  color: hsl(0, 0%, 5%);
+  text-decoration-color: hsl(0, 0%, 5%);
+  text-underline-offset: 0.3rem;  
+}
+
+.callout a:hover {
+  color: hsl(358, 53%, 39%);
+  text-decoration-color:hsl(358, 53%, 39%);
+}
+
+/************************************************************************************/
+
+/************ 4_ TEAM ************/
+
+/************************************************************************************/  
+
+.team-wrapper h2{
+  font-size: var(--step-1);
+  margin-block-start:var(--space-s); 
+}
+
+.team-wrapper h3{
+  font-size: var(--step--1);  
+  font-family: system-ui, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.team-wrapper img{
+  box-shadow:inset 0rem 1rem 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 50rem; 
+  width: 180px; 
+}
+
+.team-wrapper div{
+ background-color:var(--shadow-2); 
+ outline: 0.1rem solid transparent;
+ outline-offset: -0.125rem;
+}
+
+.team-wrapper > *{
+  border-radius: .5rem; 
+  padding: var(--space-xs); 
+  height: 100%;
+  padding-block-end: var(--space-m); 
+}
+
+.qualifications {
+  font-size: var(--step--1);
+  color: var(--brand);
+  line-height: 1.2;
+  display: inline-block;
+  margin: 0; 
+  font-weight: 600;
+  text-align: center;
+ }
+.vets img{   
+  background-color: var(--brand); 
+}
+.nurses img{ 
+  background-color: var(--secondary); 
+}
+.care-assistants img{
+  background-color: var(--tertiary); 
+  }
+
+.receptionist img{  
+  background-color: var(--accent); 
+  }
+
+
+
+  /********************************************************/
+
+
+/************ 7_ FORMS ************/
+
+/*********************************************************/
+
+/* Base form styles */
+form {
+  margin-block-end: var(--space-m);
+  background-color: var(--shadow-2);
+  padding: var(--space-m);
+  border-radius: 0.5rem;
+}
+
+.field-wrapper {
+  margin-block-end: 1.5rem;
+}
+
+/* Label styles */
+label {
+  display: block;
+  font-weight: 600;
+  margin-block-end: 0.5rem;
+  color: var(--text);
+}
+
+/* Required field indicator */
+.required {
+  color: var(--tertiary);
+  margin-inline-start: 0.25rem;
+}
+
+/* Input styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border: 0.2rem solid var(--text);
+  border-radius: 0.5rem; 
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent); 
+}
+
+/* Error states */
+input:invalid:not(:focus):not(:placeholder-shown),
+textarea:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: var(--tertiary);
+}
+
+/* Textarea specific styles */
+textarea {
+  height: 15rem;
+  resize: vertical; 
+}
+
+/************************************************************************************/
+
+/************6_OTHERS  ************/
+
+/************************************************************************************/  
+
+.logo img{
+  width: 220px; 
+}
+.social-icon,  .contact-icons{
+   width: var(--step-1);
+   height: var(--step-1);
+   fill: var(--text-alt);
+   vertical-align:middle;       
+  }  
+
+.star-rating{
+  font-size: var(--step-2);
+  color: var(--accent); 
+  transition: .25s ease-in;
+}
+.star-rating:hover{
+  font-size: var(--step-2);
+  color: var(--tertiary);
+  transition: .25s ease-in-out;
+   
+}
+.rating a{
+  text-decoration: none;
+  text-align: center; 
+}
+
+.insurance .two-col img, .fourzerofour img{
+  border-radius: 1rem;
+  margin: var(--space-s);
+}
+
+.back-to-top{
+display: flex;
+justify-content: right;
+}

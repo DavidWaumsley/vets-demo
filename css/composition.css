@@ -1,0 +1,308 @@
+/*
+COMPOSITION
+0_ BODY
+1_ HEADER & NAV 
+2_ HOMEPAGE MAIN
+4_ FOOTER 
+5_ BENTO
+6_ TEAM
+7_ FLUID BREAKOUTS 
+*/
+
+/********************************************************/
+
+/************ 0_ BODY ************/              
+
+/*********************************************************/
+
+body{
+  display: grid;
+  gap: var(--space-s-2xl);
+  grid-template: "h" 
+                 "m" 1fr  /* takes remaining space & pushes footer to bottom. */
+                 "f"; 
+                }
+                
+  header {grid-area:h;}  
+  main   {grid-area:m;}  
+  footer {grid-area:f;}  
+
+/* margin/padding for body areas */
+
+header{
+    margin-inline: 8vw; 
+    padding-block-start: var(--space-2xs); 
+ }
+  
+main{
+     margin-inline: 8vw;  
+  }
+
+footer{     
+    margin-inline: 8vw;
+    padding-block: var(--space-m);
+    }
+
+/************************************************************************************/
+
+/**********1_ HEADER & NAV  **********/
+
+/************************************************************************************/
+
+
+header > * { 
+  display: grid;    
+  place-content: center;
+        
+}
+
+@media (width > 60rem) {   
+  header { 
+  display: grid;     
+  grid-template:     
+  "logo   logo  contact  contact  cta" 
+  "logo   logo  nav      nav      nav" 
+ / 1.2fr    2fr  2fr      1fr      200px; 
+  } 
+ 
+.logo           {grid-area:logo; justify-content: start;}
+.contacts       {grid-area: contact; justify-content: start; }  
+ nav            {grid-area: nav; justify-content: start; align-content:end; border-block-start: .01rem solid var(--shadow); }
+.header-button  {grid-area:cta; justify-content: end;}
+
+} /* end of media query */
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-m) ; 
+  margin-block-end:0;
+}
+/************************************************************************************/
+
+/************ 2_ HOMEPAGE MAIN ************/
+
+/************************************************************************************/  
+ 
+@media (width < 60rem) {  
+  .two-col > *{ 
+    display: grid;   
+    justify-items:center;   
+  }
+  }
+  
+  @media (width > 60rem) {   
+  .two-col{
+
+    /*--------SETTING-------*/ 
+
+    --grid-col-count: 2;
+    --grid-gap: var(--space-xl);
+    --grid-item-min-width: 20rem;
+
+    /*---------SCARY STUFF-------------*/ 
+    --gap-count: calc(var(--grid-col-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-gap));
+    --grid-item-max-width: calc((100% - var(--total-gap-width)) /
+     var(--grid-col-count));
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+    minmax(max(var(--grid-item-min-width),
+    var(--grid-item-max-width)), 1fr));
+    gap: var(--grid-gap); 
+    align-items: center;
+  }
+
+/* Changes the DOM order */
+  .two-col div:nth-child(1){order:1;}
+  .two-col div:nth-child(2){order:2;}
+  .two-col div:nth-child(3){order:4;}
+  .two-col div:nth-child(4){order:3;}
+  .two-col div:nth-child(5){order:5;}
+  .two-col div:nth-child(6){order:6;}
+  }
+
+  .home .two-col div{
+    margin-block-end: var(--space-xl);
+  }
+
+ /************************************************************************************/
+
+ /************ 4_ FOOTER ************/
+
+/************************************************************************************/  
+  
+.fat-footer-wrapper  > * { 
+  display: grid;  
+}
+
+@media (width > 60rem) {   
+ .fat-footer-wrapper { 
+  display: grid;
+  column-gap: var(--space-2xl);
+  row-gap: var(--space-xl); 
+  grid-template: "h1  h1  h1  h2  h2  h2" 
+                 "s   s   i   i   c   c"  
+                 "b   b   b   b   b   b"  
+                 /                  
+                 1fr  1fr 1fr 1fr  1fr 1fr;
+} 
+
+.main          {grid-area:h1;}
+.branch        {grid-area:h2;}
+.service       {grid-area:s; }
+.Information   {grid-area:i; }
+.foot-contact  {grid-area:c; }
+.foot-bar      {grid-area: b; justify-items:center;}  
+} /* end of media query */
+
+
+ /************************************************************************************/
+
+/************5_ BENTO***********/
+
+/************************************************************************************/  
+
+
+@media (width < 60rem) {   
+  .bento { 
+  display: block;
+  height: min-content;
+} 
+}
+
+:where(.bento > div) {
+  padding: var(--space-l);
+  border-radius: 1rem;
+  color: var(--text-alt); 
+}
+
+.bento small{
+  width: min(28ch, 100%);
+}
+
+@media (width > 60rem) {   
+  .bento { 
+  display: grid; 
+  gap: var(--space-s); 
+  grid-template:
+    "heading    heading  heading"  1fr
+    "insure     plan     services"  
+    "callout    callout  services"  min-content
+ /  1fr         1fr      1fr
+     ;  
+  }
+} 
+
+.callout img{
+ display: none;
+}
+
+@media (width > 60rem){
+.callout{
+  display: grid;
+  gap: var(--space-s);
+  grid-template: "title img" 2rem
+                 "text  img"               
+               /  1.3fr  1fr ;
+}
+
+.callout h3 { grid-area: title;}
+.callout div {grid-area: text;}
+.callout img{
+  grid-area: img;
+  justify-self: end ;
+  align-self: center; 
+  border-radius: 1rem;
+  display: block;
+}
+}
+
+
+ /************************************************************************************/
+
+/************6_ TEAM ***********/
+
+/************************************************************************************/  
+  
+
+  .team-wrapper>* { 
+    display: grid;   
+    justify-items:center; 
+    align-self: start;
+    align-content: start;
+  }
+  
+  
+  @media (width > 22rem) {   
+  .team-wrapper{
+    /*--------Settings-------*/ 
+    --grid-col-count: 4;
+    --grid-gap: var(--space-m);
+    --grid-item-min-width: 12rem;
+    /*------------------------*/ 
+    --gap-count: calc(var(--grid-col-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-gap));
+    --grid-item-max-width: calc((100% - var(--total-gap-width)) / var(--grid-col-count));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr));
+    gap: var(--grid-gap); 
+  }  
+  }  
+
+
+
+ /************************************************************************************/
+
+ /************ 7_ FLUID BREAKOUTS ************/
+
+/************************************************************************************/  
+/* https://layout-breakouts-builder.vercel.app/ */
+
+.page-layout > *, .full-width > * {
+  grid-column: content;
+}
+.page-layout, .full-width {
+--minimum-content-padding: 2rem;
+
+/** TRACK WIDTHS **/
+--full-max-width: 1fr;
+--popout-max-width: 60rem;
+--content-max-width: 65ch;
+
+/** TRACK SIZES **/
+--full: minmax( var(--minimum-content-padding), 1fr );
+--popout: minmax( 0, calc( ( var(--popout-max-width) - var(--content-max-width)) * 0.5 ) );
+--content: min( var(--content-max-width), 100% - var(--minimum-content-padding) * 2 );
+
+display: grid;
+grid-template-columns: 
+  [full-start]
+  var(--full)
+    [popout-start]
+    var(--popout)
+      [content-start]
+      var(--content)
+      [content-end]
+    var(--popout)
+    [popout-end]
+  var(--full)
+  [full-end];
+}
+
+/** CLASSES **/
+.full { grid-column: full; }
+.full-start { grid-column-start: full-start; }
+.full-end { grid-column-end: full-end; }
+
+.popout { grid-column: popout; }
+.popout-start { grid-column-start: popout-start; }
+.popout-end { grid-column-end: popout-end; }
+
+.content { grid-column: content; }
+.content-start { grid-column-start: content-start; }
+.content-end { grid-column-end: content-end; }
+
+.full-width { grid-column: full; }
+.full-content, .full-content-nopad { grid-column: full; }
+.full-content { padding-inline: var(--minimum-content-padding); }
