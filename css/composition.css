@@ -72,7 +72,7 @@ header > * {
 
 } /* end of media query */
 
-nav ul {
+header nav ul {
   display: flex;
   flex-wrap: wrap;
   column-gap: var(--space-m) ; 
