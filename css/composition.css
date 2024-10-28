@@ -52,7 +52,7 @@ footer{
 
 header > * { 
   display: grid;    
-  place-items: center;        
+  place-self: center;        
 }
 
 @media (width > 60rem) {   
