@@ -94,7 +94,7 @@
       <nav>
         <ul>
           <li>
-            <a href="/" >Home</a>
+            <a href="/">Home</a>
           </li>
           <li><a href="/about.html">About</a></li>
           <li><a href="/services.html">Services</a></li>
@@ -104,6 +104,94 @@
         </ul>
       </nav>
     </header>
+    <main id="skip-to-main" class="page-layout">
+
+      <h1>Contact</h1>     
+
+      <div class="popout">
+
+        <p>This form is not connected.</p>
+
+        <form id="contact-form" action="https://submit-form.com/1111" novalidate aria-label="Contact Form">
+          <div class="form-group" role="group" aria-labelledby="personal-info">
+            <h2 id="personal-info" class="visually-hidden">Personal Information</h2>
+            
+            <input type="hidden" name="_redirect" value="/thank-you/" />
+            
+            <div class="field-wrapper">
+              <label for="fullname">
+                Full Name
+                <span class="required" aria-hidden="true">*</span>
+                <span class="visually-hidden">required</span>
+              </label>
+              <input
+                type="text"
+                id="fullname"
+                name="name"
+                aria-required="true"
+                aria-describedby="name-error"
+                autocomplete="name"
+                minlength="2"
+                maxlength="50"
+                pattern="[A-Za-z\s'-]+"
+              />
+              <span id="name-error" class="error-message" role="alert" aria-live="polite"></span>
+            </div>
+        
+            <div class="field-wrapper">
+              <label for="email-address">
+                Email Address
+                <span class="required" aria-hidden="true">*</span>
+                <span class="visually-hidden">required</span>
+              </label>
+              <input
+                type="email"
+                id="email-address"
+                name="email"
+                aria-required="true"
+                aria-describedby="email-error"
+                autocomplete="email"
+              />
+              <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
+            </div>
+        
+            <div class="field-wrapper">
+              <label for="phone-number">Phone Number (optional)</label>
+              <input
+                type="tel"
+                id="phone-number"
+                name="tel"
+                aria-describedby="tel-hint tel-error"
+                autocomplete="tel"
+                pattern="[0-9\s+-]+"
+              />
+              <span id="tel-hint" class="hint-text">Include country code if international</span>
+              <span id="tel-error" class="error-message" role="alert" aria-live="polite"></span>
+            </div>
+        
+            <div class="field-wrapper">
+              <label for="message-text">
+                Message
+                <span class="required" aria-hidden="true">*</span>
+                <span class="visually-hidden">required</span>
+              </label>
+              <textarea
+                id="message-text"
+                name="message"
+                aria-required="true"
+                aria-describedby="message-error"
+                minlength="10"
+                maxlength="1000"
+              ></textarea>
+              <span id="message-error" class="error-message" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+        
+          <button class="btn" type="submit" aria-label="Submit form">
+            SEND
+          </button>
+        </form>
+    </div>
 
     </main>
     <footer class="[ flow ]" id="skip-to-footer">
