@@ -51,8 +51,8 @@ footer{
 
 
 header > * { 
-  display: grid;    
-justify-content: center;    
+  display: flex;    
+  justify-content: center;    
 }
 
 @media (width > 60rem) {   
