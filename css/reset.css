@@ -18,11 +18,11 @@ A version of this: https://piccalil.li/blog/a-more-modern-css-reset/
      text-size-adjust: none;
    }
  
-   /* To animating to or from height: auto  */
-   html {
-    interpolate-size: allow-keywords;
+/* To animating to or from height: auto  */
+  html {
+   interpolate-size: allow-keywords;
   }
-  
+
    /* Remove default margin in favour of better control in authored CSS */
  
  body, h1, h2, h3, h4, p,
